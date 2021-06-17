@@ -2,4 +2,4 @@
 *.sqlite3
 venv
 *.pyc
-secret_settings.py
+.env
