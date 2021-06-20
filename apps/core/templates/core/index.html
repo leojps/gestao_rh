@@ -7,12 +7,15 @@
     </div>
     <div class="col">
       olá {{ usuario.funcionario.nome }}
+      <a href="{% url 'list_funcionarios'  %}">Gerenciar Funcionários</a>
     </div>
     <div class="col">
       <a href="{% url 'logout' %}">Logout</a>
 
       {% if usuario.funcionario.empresa %}
-          <a href="">Editar Empresa</a>
+          <a href="{% url 'edit_empresa' usuario.funcionario.empresa.id %}">Editar Empresa</a>
+      {% else %}
+          <a href="{% url 'create_empresa' %}">Criar empresa</a>
       {% endif %}
     </div>
   </div>
