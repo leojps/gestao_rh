@@ -6,10 +6,14 @@
       Seja bem vindo 1
     </div>
     <div class="col">
-      Seja bem vindo 2
+      olá {{ usuario.funcionario.nome }}
     </div>
     <div class="col">
       <a href="{% url 'logout' %}">Logout</a>
+
+      {% if usuario.funcionario.empresa %}
+          <a href="">Editar Empresa</a>
+      {% endif %}
     </div>
   </div>
 
