@@ -10,6 +10,12 @@
       <a href="{% url 'list_funcionarios'  %}">Gerenciar Funcionários</a>
     </div>
     <div class="col">
+      <a href="{% url 'list_departamentos'  %}">Gerenciar departamentos</a>
+    </div>
+    <div class="col">
+      <a href="{% url 'list_registro_hora_extra'  %}">Gerenciar horas extras</a>
+    </div>
+    <div class="col">
       <a href="{% url 'logout' %}">Logout</a>
 
       {% if usuario.funcionario.empresa %}
